@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+}
+:root{ 
+    --main-clr : #2E75B6;
+    --snd-clr : #494949;
+    --third-clr : #333F50;
+}
+.g-clr{
+    color: #8a8a8a;
+}
+
+.clr-main{
+    color:  #007bff !important;
+}
+.hide-item{
+    display: none;
+}
+
+.cover-b{
+    height: 1OOvh  !important;
+}
+.clr-white{
+    color: white !important;
+}
+.text-shadow{
+    text-shadow: 2px 2px 6px gray !important;
+}
+.bold{
+    font-weight: bold !important;
+}
+
+.font-sml{
+    font-size: x-small !important;
+}
+.img{
+    height: 300px !important;
+    width: fit-content;
+}
+.box-img{
+    height: 160px !important;
+    width: 100% !important;
+}
+
+.circle{
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 50% !important;
+    margin-top: -30px;
+    margin-left: 10px;
+}
+
+.circle-img{
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 50% !important;
+    margin-top: -60px;
+    margin-left: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.round{
+    border-radius: 20px;
+}
+
+.rounded-top-left{
+    border-radius : 20px 0 0 0;
+}
+.rounded-bottom-left{
+    border-radius : 0 0 0 20px;
+}
+
+.rounded-top-right{
+    border-radius : 0 20px 0 0;
+}
+.rounded-bottom-right{
+    border-radius : 0 0 20px 0;
+}
+.cursor{
+    cursor: pointer !important;
+}
+
+.link , .link-outline, .link-sml{
+    cursor: pointer !important;
+    text-decoration: none !important;
+    color: #007bff !important;
+}
+.link-outline{
+    color: #8a8a8a !important;
+}
+.link-sml{
+    font-size: small !important;
+}
+.link-outline:hover{
+    color : var(--main-clr) !important;
+}
+
+
+fieldset{
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.m-up{
+    margin-top: -60px !important;
+}
+
+
+
+
+/*  */
+
+.slide{
+    background-position: center;
+    box-sizing: border-box;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-image: url('../img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg');
+    height: 500px !important; 
+}
+
+.over{
+    width: 100% !important;
+    height: 500px !important;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.over .text , .over .title, .over .s-title, .slide-btn, a#log{
+    color: white;
+}
+.over .title{ font-size: 50px; }
+.over .text{ font-size: x-large; }
+.over .s-title{ 
+    font-size: x-large;
+    text-align: left;
+}
+
+.btn-white{
+    background-color: white  !important;
+    color: #494949  !important;
+}
+
+.bga-white{
+    background-color: rgba( 255, 255, 255, 0.9);
+}
+@media (max-width : 840px ) {
+
+    .hide{
+        display: none;
+    }
+}
+
+.visible{
+    display: block !important;
+}
+
+
+.modal-sn{
+    width: 100% !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 900 !important;
+    margin: 0 !important;
+    background-color: #000000b9 !important;
+    display: none;
+}
