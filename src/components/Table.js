@@ -14,7 +14,6 @@ export class Table extends Component {
     
 
     render(){
-
         return (
 
         <div>
@@ -46,7 +45,7 @@ export class Table extends Component {
                         <td> {item.niveau.nom} </td>
                         <td> {item.annee_academique.anneeAcademique} </td>
                         <td> 
-                            <button className="btn btn-sm bg-primary me-2"> <img src={'img/icons8-tag-utilisateur-48.png'} width="16" height="16" alt="" srcSet="" /> </button> 
+                            <a className="btn btn-sm bg-primary me-2" href={'/wisdom/'+item.id}> <img src={'img/icons8-tag-utilisateur-48.png'} width="16" height="16" alt="" srcSet="" /> </a> 
                             <button className="btn btn-sm bg-danger" onClick={() =>this.props.supression(item.id)}> <img src={'img/icons8-poubelle-48.png'} width="16" height="16" alt="" srcSet="" /> </button> 
                         </td>
                     </tr>
