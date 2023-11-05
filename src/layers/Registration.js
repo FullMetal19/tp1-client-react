@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 import { WarningBox } from '../components/WarningBox';
 import AxiosClient from '../AxiosClient';
 
@@ -24,7 +23,7 @@ export class Registration extends Component {
             anneeAcademique : '',
             adresse:'',
 
-            state : false,
+            notice : false,
 
             allFormation : [],
             allNiveau : [],
@@ -134,10 +133,13 @@ export class Registration extends Component {
             promo : this.state.promotion,
             date_de_naissance : this.state.dateNaiss,
             lieu_de_naissance  : this.state.lieuNaiss,
+            image: this.state.image,
 
             formation_id : this.state.formation,
             niveau_id : this.state.niveau,
             annee_academique_id : this.state.anneeAcademique,
+
+            state : false
             
         };
         console.log(credentials)
@@ -145,11 +147,11 @@ export class Registration extends Component {
         AxiosClient.post('etudiant', credentials)
         .then(res => {
 
-            if( res.data.status === 200 ) {
+           
+            if( res.status === 201 || res.status === 200) {
 
-                this.setState({ state : true })
-                console.log(res.data)
-                window.location.replace('http://localhost:3000/wisdom');
+                this.setState({ notice : true })
+                console.log( this.state.notice )               
             }
             else{
 
@@ -171,7 +173,7 @@ export class Registration extends Component {
             <div className="row d-flex justify-content-center mt-5">
                 <div className="col-lg-8">
 
-                    <WarningBox state={ this.state.state } msg={ 'There is no project related to your account yet' } />      
+                    <WarningBox state={ this.state.notice } msg={ 'Votre inscription a ete bien enregistree' } />      
 
                     <div className="row px-4">
                         {/* <!--  --> */}
@@ -194,8 +196,8 @@ export class Registration extends Component {
                                                 <img src={'img/icons8-photo-30.png'} alt="" srcset="" />
                                             </div>
                                         </label>
-                                        <input type="file" name="image" className="hide-item" id="ppAdmin" required onChange={ this.getImage }/>
-                                        <button className="btn btn-outline-main mt-2" type="submit"> Sauvegarder </button>
+                                        <input type="file" name="image" className="hide-item" id="ppAdmin" onChange={ this.getImage }/>
+                                        
                                     </div>
                                 </div>
                                 <div className="col-md-5">

@@ -8,7 +8,7 @@ export class WarningBox extends Component {
 
             this.props.state ? (
 
-                <div className="alert alert-danger my-3">
+                <div className="alert alert-primary my-3">
                    <span className=""> { this.props.msg } </span>
                 </div>
             ) : null

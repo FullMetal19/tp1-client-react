@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { WarningBox } from '../components/WarningBox';
-import axios from 'axios';
 import { Table } from '../components/Table';
 import AxiosClient from '../AxiosClient';
 
@@ -13,6 +12,16 @@ export class List extends Component {
             state : false
         }
 
+    }
+    supression = (id)=>{
+        AxiosClient.delete("inscription/"+id)
+        .then(()=>{
+            AxiosClient.get("/inscription")
+        .then(res => {
+            ( res.data.status === 200 ) ? this.setState({ state : true }) : this.setState({  data : res.data.data })
+            
+        } );
+        })
     }
 
     componentDidMount() {
@@ -38,7 +47,7 @@ export class List extends Component {
                     {/*  */}
                     <div className="bg-white shadow-sm p-5 mb-5 d-flex flex-column">   
                
-                        <Table data={this.state.data} />  
+                        <Table data={this.state.data} supression={this.supression} />  
 
                         <WarningBox state={ this.state.state } msg={ 'There is no project related to your account yet' } />      
                

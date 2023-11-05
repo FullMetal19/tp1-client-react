@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
+import AxiosClient from '../AxiosClient';
 
 
 export class Table extends Component {
 
     constructor( props ){
         super( props );
+        this.state = {
+            id :''
+        }
     }
+
+    
 
     render(){
 
@@ -41,7 +47,7 @@ export class Table extends Component {
                         <td> {item.annee_academique.anneeAcademique} </td>
                         <td> 
                             <button className="btn btn-sm bg-primary me-2"> <img src={'img/icons8-tag-utilisateur-48.png'} width="16" height="16" alt="" srcSet="" /> </button> 
-                            <button className="btn btn-sm bg-danger"> <img src={'img/icons8-poubelle-48.png'} width="16" height="16" alt="" srcSet="" /> </button> 
+                            <button className="btn btn-sm bg-danger" onClick={() =>this.props.supression(item.id)}> <img src={'img/icons8-poubelle-48.png'} width="16" height="16" alt="" srcSet="" /> </button> 
                         </td>
                     </tr>
                     ))}
