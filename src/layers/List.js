@@ -16,7 +16,7 @@ export class List extends Component {
     }
 
     componentDidMount() {
-        AxiosClient.get("/etudiant")
+        AxiosClient.get("/inscription")
         .then(res => {
             ( res.data.status === 200 ) ? this.setState({ state : true }) : this.setState({  data : res.data.data })
             

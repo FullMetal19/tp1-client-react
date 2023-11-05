@@ -149,6 +149,7 @@ export class Registration extends Component {
 
                 this.setState({ state : true })
                 console.log(res.data)
+                window.location.replace('http://localhost:3000/wisdom');
             }
             else{
 

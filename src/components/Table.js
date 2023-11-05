@@ -19,6 +19,11 @@ export class Table extends Component {
                         <th scope="col">#</th>
                         <th scope="col">First</th>
                         <th scope="col">Last</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Code Etudiant</th>
+                        <th scope="col">Formation</th>
+                        <th scope="col">Niveau</th>
+                        <th scope="col">Année Académique</th>
                         <th scope="col">Handle</th>
                     </tr>
                 </thead>
@@ -27,11 +32,16 @@ export class Table extends Component {
                     { this.props.data.map( item =>( 
                     <tr key={item.id}>
                         <th scope="row"> {item.id} </th>
-                        <td> {item.prenom} </td>
-                        <td> {item.nom} </td>
+                        <td> {item.etudiant.prenom} </td>
+                        <td> {item.etudiant.nom} </td>
+                        <td> {item.etudiant.email} </td>
+                        <td> {item.etudiant.codeEtudiant} </td>
+                        <td> {item.formation.nom} </td>
+                        <td> {item.niveau.nom} </td>
+                        <td> {item.annee_academique.anneeAcademique} </td>
                         <td> 
-                            <button className="btn btn-sm bg-primary me-2"> <img src={'img/icons8-tag-utilisateur-48.png'} width="16" height="16" alt="" srcset="" /> </button> 
-                            <button className="btn btn-sm bg-danger"> <img src={'img/icons8-poubelle-48.png'} width="16" height="16" alt="" srcset="" /> </button> 
+                            <button className="btn btn-sm bg-primary me-2"> <img src={'img/icons8-tag-utilisateur-48.png'} width="16" height="16" alt="" srcSet="" /> </button> 
+                            <button className="btn btn-sm bg-danger"> <img src={'img/icons8-poubelle-48.png'} width="16" height="16" alt="" srcSet="" /> </button> 
                         </td>
                     </tr>
                     ))}
