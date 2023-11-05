@@ -18,24 +18,24 @@ export class Slide extends Component {
 
         return (
 
-            <div class="container-fluid p-0 m-0"> 
-            <div class="slide">
-                <div class="over py-5 px-2">
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-10">
+            <div className="container-fluid p-0 m-0"> 
+            <div className="slide">
+                <div className="over py-5 px-2">
+                    <div className="row d-flex justify-content-center">
+                        <div className="col-10">
     
-                            <div class="row d-flex justify-content-between mt-4">
+                            <div className="row d-flex justify-content-between mt-4">
                             {/* <!--  --> */}
-                                <div class="col-md-5 d-flex flex-column">
+                                <div className="col-md-5 d-flex flex-column">
 
                                     {  this.state.value ? ( < TextSlide /> ) : ( < Palette /> )  }
 
-                                    <div class="mb-5">  <button class="btn btn-lg btn-white" onClick={ this.toggle } > { this.state.value ? 'Voir palette' : 'Voir contenu'  }  </button> </div>
+                                    <div className="mb-5">  <button className="btn btn-lg btn-white" onClick={ this.toggle } > { this.state.value ? 'Voir palette' : 'Voir contenu'  }  </button> </div>
                                 
                                 </div>
                             {/* <!--  --> */}
-                                <div class="col-md-5 hide text-end">
-                                    <img src={'img/Groupe 4.png'} alt="" class="img-fluid" width="300" />
+                                <div className="col-md-5 hide text-end">
+                                    <img src={'img/Groupe 4.png'} alt="" className="img-fluid" width="300" />
                                 </div>
                             </div>
     

@@ -17,42 +17,42 @@ export class Homes extends Component {
         
         <SubSlide /> 
 
-        <div class="container-fluid bg-light py-4">
+        <div className="container-fluid bg-light py-4">
 
-        <div class="row d-flex justify-content-center mt-5">
-            <div class="col-10">  
-                <div class="row d-flex justify-content-around">
+        <div className="row d-flex justify-content-center mt-5">
+            <div className="col-10">  
+                <div className="row d-flex justify-content-around">
                     {/*  */}
-                    <div class="col-md-5 mb-5">
-                        <div class="d-flex flex-column p-0 shadow">
-                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} class="box-img mb-3" alt="..." />
-                            <div class="px-3 mb-2"> <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p> </div>
+                    <div className="col-md-5 mb-5">
+                        <div className="d-flex flex-column p-0 shadow">
+                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} className="box-img mb-3" alt="..." />
+                            <div className="px-3 mb-2"> <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p> </div>
                         </div>
                     </div>
                     {/* */}
-                    <div class="col-md-5 mb-5">
-                        <div class="d-flex flex-column p-0 shadow">
-                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} class="box-img mb-3" alt="..." />
-                            <div class="px-3 mb-2">
-                              <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div className="col-md-5 mb-5">
+                        <div className="d-flex flex-column p-0 shadow">
+                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} className="box-img mb-3" alt="..." />
+                            <div className="px-3 mb-2">
+                              <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
                    {/*  */}
-                    <div class="col-md-5 mb-5">
-                        <div class="d-flex flex-column p-0 shadow">
-                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} class="box-img mb-3" alt="..." />
-                            <div class="px-3 mb-2">
-                              <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div className="col-md-5 mb-5">
+                        <div className="d-flex flex-column p-0 shadow">
+                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} className="box-img mb-3" alt="..." />
+                            <div className="px-3 mb-2">
+                              <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>
                     {/*  */}
-                    <div class="col-md-5 mb-5">
-                        <div class="d-flex flex-column p-0 shadow">
-                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} class="box-img mb-3" alt="..." />
-                            <div class="px-3 mb-2">
-                              <p class="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <div className="col-md-5 mb-5">
+                        <div className="d-flex flex-column p-0 shadow">
+                            <img src={'img/hercules-hall-entoure-verdure-sous-lumiere-du-soleil-pendant-journee-munich-allemagne.jpg'} className="box-img mb-3" alt="..." />
+                            <div className="px-3 mb-2">
+                              <p className="">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                             </div>
                         </div>
                     </div>

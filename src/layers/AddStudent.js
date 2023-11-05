@@ -82,52 +82,52 @@ export class AddStudent extends Component {
 
         return (
            
-    <div class="container-fluid bg-light py-5">
+    <div className="container-fluid bg-light py-5">
 
         <form onSubmit={this.sendForm} className="form mb-4" action="" method="post">
 
-            <div class="row d-flex justify-content-center mt-5">
-                <div class="col-lg-8">
+            <div className="row d-flex justify-content-center mt-5">
+                <div className="col-lg-8">
 
                     <WarningBox state={ this.state.state } msg={ 'There is no project related to your account yet' } />      
 
-                    <div class="row px-4">
+                    <div className="row px-4">
                         {/* <!--  --> */}
-                        <div class="col-lg-12 mb-5 d-flex flex-column align-items-center">
-                            <span class="h1 g-d-clr mb-3"> Inscrire un nouveau etudiant </span>
-                            <span class="g-d-clr"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
+                        <div className="col-lg-12 mb-5 d-flex flex-column align-items-center">
+                            <span className="h1 g-d-clr mb-3"> Inscrire un nouveau etudiant </span>
+                            <span className="g-d-clr"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </span>
                         </div>
       
                         {/* <!--  BOX-3 --> */}
-                        <div class="col-lg-12 border p-5 rounded-2 mb-5">
+                        <div className="col-lg-12 border p-5 rounded-2 mb-5">
                             {/* <!-- ITEM --> */}
-                            <div class="row mb-3 d-flex justify-content-between">
-                                <div class="col-md-5">
-                                    <div class="d-flex flex-column align-items-center">
-                                        <div class="d-flex flex-column align-items-center justify-content-center gap-2">
-                                            <img src="../../assets/img/icons8-student-64.png" alt=""class="rounded-circle shadow" height="160" width="160" />   
+                            <div className="row mb-3 d-flex justify-content-between">
+                                <div className="col-md-5">
+                                    <div className="d-flex flex-column align-items-center">
+                                        <div className="d-flex flex-column align-items-center justify-content-center gap-2">
+                                            <img src="../../assets/img/icons8-student-64.png" alt=""className="rounded-circle shadow" height="160" width="160" />   
                                         </div>    
-                                        <label class="link " for="ppAdmin">
-                                            <div class="mb-3 circle-img shadow bg-primary" width="30px" height="30px">
+                                        <label className="link " for="ppAdmin">
+                                            <div className="mb-3 circle-img shadow bg-primary" width="30px" height="30px">
                                                 <img src={'img/icons8-photo-30.png'} alt="" srcset="" />
                                             </div>
                                         </label>
-                                        <input type="file" name="image" class="hide-item" id="ppAdmin" required onChange={ this.getImage }/>
-                                        <button class="btn btn-outline-main mt-2" type="submit"> Sauvegarder </button>
+                                        <input type="file" name="image" className="hide-item" id="ppAdmin" required onChange={ this.getImage }/>
+                                        <button className="btn btn-outline-main mt-2" type="submit"> Sauvegarder </button>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class="mb-2">
-                                        <label for="exampleFormControlInput2" class="font-sml" > Prenom </label>
-                                        <input type="mail" class="form-control" placeholder="example@mail.com" id="exampleFormControlInput2" required onChange={ this.getPrenom }/>
+                                <div className="col-md-5">
+                                    <div className="mb-2">
+                                        <label for="exampleFormControlInput2" className="font-sml" > Prenom </label>
+                                        <input type="mail" className="form-control" placeholder="example@mail.com" id="exampleFormControlInput2" required onChange={ this.getPrenom }/>
                                     </div>
-                                    <div class="mb-2">
-                                        <label for="exampleFormControlInput2" class="font-sml" > Nom </label>
-                                        <input type="mail" class="form-control" placeholder="example@mail.com" id="exampleFormControlInput2" required onChange={ this.getNom }/>
+                                    <div className="mb-2">
+                                        <label for="exampleFormControlInput2" className="font-sml" > Nom </label>
+                                        <input type="mail" className="form-control" placeholder="example@mail.com" id="exampleFormControlInput2" required onChange={ this.getNom }/>
                                     </div>
-                                    <div class="">
-                                        <label for="exampleFormControlInput11" class="font-sml"> Sexe </label>
-                                        <select name="" id="exampleFormControlInput11" class="form-control"  onChange={ this.getSexe }>
+                                    <div className="">
+                                        <label for="exampleFormControlInput11" className="font-sml"> Sexe </label>
+                                        <select name="" id="exampleFormControlInput11" className="form-control"  onChange={ this.getSexe }>
                                             <option value="masculin"> Masculin </option>
                                             <option value="feminin"> Feminin </option>
                                         </select>
@@ -140,52 +140,52 @@ export class AddStudent extends Component {
         
                         {/* <!-- SECOND BOX FOR CREATIMG NEW ACCOUNT --> */}
         
-                        <div class="col-lg-12 border p-5 rounded-2">
+                        <div className="col-lg-12 border p-5 rounded-2">
                             {/* <!-- ITEM --> */}
-                            <div class="row mb-3">
-                                <div class="col-md-6 mb-3">
-                                    <div class="">
-                                        <label for="exampleFormControlInput7" class="font-sml"> Ine </label>
-                                        <input type="text" class="form-control" placeholder="Prenom" id="exampleFormControlInput7" required onChange={ this.getIne } />
+                            <div className="row mb-3">
+                                <div className="col-md-6 mb-3">
+                                    <div className="">
+                                        <label for="exampleFormControlInput7" className="font-sml"> Ine </label>
+                                        <input type="text" className="form-control" placeholder="Prenom" id="exampleFormControlInput7" required onChange={ this.getIne } />
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="">
-                                        <label for="exampleFormControlInput8" class="font-sml" > Code etudiant </label>
-                                        <input type="text" class="form-control" placeholder="Nom" id="exampleFormControlInput8" required onChange={ this.getCodeTudiant } />
+                                <div className="col-md-6">
+                                    <div className="">
+                                        <label for="exampleFormControlInput8" className="font-sml" > Code etudiant </label>
+                                        <input type="text" className="form-control" placeholder="Nom" id="exampleFormControlInput8" required onChange={ this.getCodeTudiant } />
                                     </div>
                                 </div>
                             </div>
 
                             {/* <!-- ITEM --> */}
-                            <div class="row mb-3">
-                                <div class="col-md-6 mb-3">
-                                    <div class="">
-                                        <label for="exampleFormControlInput9" class="font-sml"> Date de naissance ( <span class="r-clr"> optionnelle </span> ) </label>
-                                        <input type="date" class="form-control" placeholder="" id="exampleFormControlInput9" required onChange={ this.getDateNaiss } />
+                            <div className="row mb-3">
+                                <div className="col-md-6 mb-3">
+                                    <div className="">
+                                        <label for="exampleFormControlInput9" className="font-sml"> Date de naissance ( <span className="r-clr"> optionnelle </span> ) </label>
+                                        <input type="date" className="form-control" placeholder="" id="exampleFormControlInput9" required onChange={ this.getDateNaiss } />
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="">
-                                        <label for="exampleFormControlInput10" class="font-sml" > Lieu de naissance ( <span class="r-clr"> optionnelle </span> ) </label>
-                                        <input type="text" class="form-control" placeholder="" id="exampleFormControlInput10" required onChange={ this.getLieuNaiss } />
+                                <div className="col-md-6">
+                                    <div className="">
+                                        <label for="exampleFormControlInput10" className="font-sml" > Lieu de naissance ( <span className="r-clr"> optionnelle </span> ) </label>
+                                        <input type="text" className="form-control" placeholder="" id="exampleFormControlInput10" required onChange={ this.getLieuNaiss } />
                                     </div>
                                 </div>
                             </div>
 
                             {/* <!-- ITEM --> */}
-                            <div class="row mb-3">
-                                <div class="col-md-6 mb-3">
-                                    <div class="">
-                                        <label for="exampleFormControlInput7" class="font-sml"> Formation  </label>
-                                        <input type="text" class="form-control" placeholder="Prenom" id="exampleFormControlInput7" required onChange={ this.getFormation } />
+                            <div className="row mb-3">
+                                <div className="col-md-6 mb-3">
+                                    <div className="">
+                                        <label for="exampleFormControlInput7" className="font-sml"> Formation  </label>
+                                        <input type="text" className="form-control" placeholder="Prenom" id="exampleFormControlInput7" required onChange={ this.getFormation } />
                                     </div>
                                 </div>
                             </div>
                         
         
-                            <div class="text-end">
-                                <div class=""> <button class="btn btn-primary"> Enregistrer </button> </div>
+                            <div className="text-end">
+                                <div className=""> <button className="btn btn-primary"> Enregistrer </button> </div>
                             </div>
 
                         </div>
