@@ -107,6 +107,7 @@ export class ModifStudent extends Component {
                     nom:res.data.data.etudiant.nom,
                     sexe:res.data.data.etudiant.sexe,
                     ine:res.data.data.etudiant.ine,
+                    image:res.data.data.etudiant.image,
                     adresse:res.data.data.etudiant.adresse,
                     formation:res.data.data.formation.id,
                     niveau:res.data.data.niveau.id,
@@ -137,8 +138,8 @@ export class ModifStudent extends Component {
     getPrenom = (e)=>{ this.setState( { prenom : e.target.value } ) }
     getNom = (e)=>{ this.setState( { nom : e.target.value } ) }
     getSexe = (e)=>{ this.setState( { sexe : e.target.value } ) }
-    getImage = (e)=>{ this.setState( { image : e.target.value } ) }
-
+    getImage = (e)=>{ this.setState( { image : e.target.files[0]} ) }
+ 
     getIne = (e)=>{ this.setState( { ine : e.target.value } ) }
     getAdresse = (e)=>{ this.setState( { adresse : e.target.value } ) }
     getFormation = (e)=>{ this.setState( { formation : e.target.value } ) }
@@ -211,9 +212,9 @@ export class ModifStudent extends Component {
                                 <div class="col-md-5">
                                     <div class="d-flex flex-column align-items-center">
                                         <div class="d-flex flex-column align-items-center justify-content-center gap-2">
-                                            <img src="../../assets/img/icons8-student-64.png" alt=""class="rounded-circle shadow" height="160" width="160" />   
+                                            <img src={this.state.loader ? "http://localhost:8000/api/"+this.state.image: ""} alt=""class="rounded-circle shadow" height="160" width="160" />   
                                         </div>    
-                                        <label class="link " for="ppAdmin">
+                                        <label class="link " for="ppAdmin"> 
                                             <div class="mb-3 circle-img shadow bg-primary" width="30px" height="30px">
                                                 <img src={'img/icons8-photo-30.png'} alt="" srcset="" />
                                             </div>

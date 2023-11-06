@@ -39,7 +39,7 @@ export class Registration extends Component {
     getAdresse = (e)=>{ this.setState( { adresse : e.target.value } ) }
     getNom = (e)=>{ this.setState( { nom : e.target.value } ) }
     getSexe = (e)=>{ this.setState( { sexe : e.target.value } ) }
-    getImage = (e)=>{ this.setState( { image : e.target.value } ) }
+    getImage = (e)=>{ this.setState( { image : e.target.files[0]}  ) }
     getIne = (e)=>{ this.setState( { ine : e.target.value } ) }
     getPromotion = (e)=>{ this.setState( { promotion : e.target.value } ) }
     getDateNaiss = (e)=>{ this.setState( { dateNaiss : e.target.value } ) }
@@ -121,30 +121,28 @@ export class Registration extends Component {
     sendForm = (e)=>{
 
         e.preventDefault();
+    const credentials = new FormData();
+    credentials.append('image', this.state.image); 
+    credentials.append('prenom', this.state.prenom);
+    credentials.append('nom', this.state.nom);
+    credentials.append('adresse', this.state.adresse);
+    credentials.append('sexe', this.state.sexe);
+    credentials.append('ine', this.state.ine);
+    credentials.append('promo', this.state.promotion);
+    credentials.append('date_de_naissance', this.state.dateNaiss);
+    credentials.append('lieu_de_naissance', this.state.lieuNaiss);
+    credentials.append('formation_id', this.state.formation);
+    credentials.append('niveau_id', this.state.niveau);
+    credentials.append('annee_academique_id', this.state.anneeAcademique);
+
+    console.log(credentials);
+
         
-        const credentials = {
-
-            // email : this.state.email,
-            prenom : this.state.prenom ,
-            nom : this.state.nom,
-            adresse : this.state.adresse,
-            sexe : this.state.sexe,
-            ine: this.state.ine,
-            promo : this.state.promotion,
-            date_de_naissance : this.state.dateNaiss,
-            lieu_de_naissance  : this.state.lieuNaiss,
-            image: this.state.image,
-
-            formation_id : this.state.formation,
-            niveau_id : this.state.niveau,
-            annee_academique_id : this.state.anneeAcademique,
-
-            state : false
-            
-        };
-        console.log(credentials)
-        
-        AxiosClient.post('etudiant', credentials)
+        AxiosClient.post('etudiant', credentials,{
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        })
         .then(res => {
 
            
